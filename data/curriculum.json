@@ -1,0 +1,411 @@
+[
+  {
+    "id": "NUMEROS",
+    "name": "Números",
+    "semester": 1,
+    "prerequisites": [],
+    "description": "Desarrolla bases de pensamiento numérico, operaciones, razonamiento y resolución de problemas con foco escolar."
+  },
+  {
+    "id": "APREND_DES_TP",
+    "name": "Aprendizaje y Desarrollo: Teoría y Práctica",
+    "semester": 1,
+    "prerequisites": [],
+    "description": "Revisa teorías del aprendizaje y del desarrollo, conectándolas con situaciones educativas y toma de decisiones docentes."
+  },
+  {
+    "id": "TEORIA_EDUC",
+    "name": "Teoría de la Educación",
+    "semester": 1,
+    "prerequisites": [],
+    "description": "Aborda fundamentos y enfoques de la educación, rol docente, fines formativos y contexto educativo."
+  },
+  {
+    "id": "LEN_ART_VIS",
+    "name": "Desarrollo y Enseñanza del Lenguaje Artístico Visual",
+    "semester": 1,
+    "prerequisites": [],
+    "description": "Explora el lenguaje visual y estrategias didácticas para diseñar experiencias artísticas en el aula."
+  },
+  {
+    "id": "FUND_LING",
+    "name": "Fundamentos Lingüísticos",
+    "semester": 1,
+    "prerequisites": [],
+    "description": "Introduce nociones de lenguaje y lingüística aplicadas a la comunicación y al aprendizaje en educación básica."
+  },
+  {
+    "id": "GEOMETRIA_I",
+    "name": "Geometría I",
+    "semester": 2,
+    "prerequisites": [
+      "NUMEROS"
+    ],
+    "description": "Fortalece nociones geométricas básicas y razonamiento espacial para su enseñanza en educación básica."
+  },
+  {
+    "id": "APREND_DES_ESC",
+    "name": "Aprendizaje y Desarrollo del Escolar",
+    "semester": 2,
+    "prerequisites": [
+      "APREND_DES_TP"
+    ],
+    "description": "Profundiza en desarrollo y aprendizaje en etapa escolar, considerando diversidad, contexto y necesidades educativas."
+  },
+  {
+    "id": "CURRICULUM_EB",
+    "name": "Currículum en la Educación Básica",
+    "semester": 2,
+    "prerequisites": [],
+    "description": "Analiza bases curriculares, planificación, objetivos de aprendizaje y diseño de experiencias alineadas al currículum."
+  },
+  {
+    "id": "ORALIDAD_SEM_INF",
+    "name": "Oralidad y Desarrollo Semiótico Infantil",
+    "semester": 2,
+    "prerequisites": [
+      "FUND_LING"
+    ],
+    "description": "Desarrolla comprensión de oralidad, comunicación y semiosis infantil, y estrategias para su fortalecimiento en aula."
+  },
+  {
+    "id": "PRACTICA_I",
+    "name": "Práctica I: Educación Básica",
+    "semester": 2,
+    "prerequisites": [
+      "APREND_DES_TP"
+    ],
+    "description": "Primer acercamiento al contexto escolar: observación, reflexión pedagógica y tareas guiadas en aula/centro educativo."
+  },
+  {
+    "id": "QUIMICA_GRAL",
+    "name": "Química General",
+    "semester": 3,
+    "prerequisites": [],
+    "description": "Introduce conceptos fundamentales de química para comprender fenómenos naturales y su didáctica posterior."
+  },
+  {
+    "id": "EVALUACION_EB",
+    "name": "Evaluación en Educación Básica",
+    "semester": 3,
+    "prerequisites": [
+      "CURRICULUM_EB"
+    ],
+    "description": "Diseña y analiza evaluación para el aprendizaje: instrumentos, criterios, retroalimentación y uso de evidencias."
+  },
+  {
+    "id": "DID_LECTURA",
+    "name": "Didáctica de la Lectura",
+    "semester": 3,
+    "prerequisites": [
+      "CURRICULUM_EB",
+      "ORALIDAD_SEM_INF"
+    ],
+    "description": "Estrategias para enseñar lectura y comprensión; planificación, mediación, evaluación y apoyo a diversidad lectora."
+  },
+  {
+    "id": "CSOCIALES",
+    "name": "Ciencias Sociales",
+    "semester": 3,
+    "prerequisites": [],
+    "description": "Bases de ciencias sociales (sociedad, ciudadanía, historia y territorio) para comprensión y enseñanza escolar."
+  },
+  {
+    "id": "ELECTIVO_TEOL",
+    "name": "Electivo Formación Teológica",
+    "semester": 3,
+    "prerequisites": [],
+    "description": "Curso electivo del área de formación teológica."
+  },
+  {
+    "id": "ANALISIS_DATOS",
+    "name": "Análisis de Datos",
+    "semester": 4,
+    "prerequisites": [],
+    "description": "Introduce análisis e interpretación de datos para contextos educativos: lectura de información, gráficos y decisiones."
+  },
+  {
+    "id": "INTRO_BIO",
+    "name": "Introducción a la Biología",
+    "semester": 4,
+    "prerequisites": [],
+    "description": "Fundamentos de biología para comprender seres vivos y procesos, base para didáctica de ciencias naturales."
+  },
+  {
+    "id": "DIVERS_INCL",
+    "name": "Diversidad e Inclusión en Educación",
+    "semester": 4,
+    "prerequisites": [],
+    "description": "Principios de inclusión, atención a la diversidad y barreras de aprendizaje; diseño de apoyos y prácticas equitativas."
+  },
+  {
+    "id": "OPT_HIST",
+    "name": "Optativo Historia de Chile y América",
+    "semester": 4,
+    "prerequisites": [],
+    "description": "Curso electivo de profundización histórica (Chile/América u otro énfasis) orientado a formación docente."
+  },
+  {
+    "id": "FILOSOFIA",
+    "name": "Filosofía: ¿Para Qué?",
+    "semester": 4,
+    "prerequisites": [],
+    "description": "Reflexión filosófica sobre el sentido y propósito de la educación y el conocimiento."
+  },
+  {
+    "id": "DID_MAT_I",
+    "name": "Didáctica de la Matemática I",
+    "semester": 5,
+    "prerequisites": [
+      "ANALISIS_DATOS",
+      "GEOMETRIA_I",
+      "CURRICULUM_EB",
+      "EVALUACION_EB"
+    ],
+    "description": "Planifica enseñanza de matemática I: enfoques didácticos, tareas, errores típicos, evaluación y progresiones."
+  },
+  {
+    "id": "DID_CN_I",
+    "name": "Didáctica de las Ciencias Naturales I",
+    "semester": 5,
+    "prerequisites": [
+      "INTRO_BIO",
+      "QUIMICA_GRAL",
+      "CURRICULUM_EB",
+      "EVALUACION_EB",
+      "APREND_DES_ESC"
+    ],
+    "description": "Diseña experiencias de ciencias naturales: indagación, modelos, habilidades científicas, evaluación y seguridad."
+  },
+  {
+    "id": "LIT_NINOS",
+    "name": "Literatura para Niños",
+    "semester": 5,
+    "prerequisites": [],
+    "description": "Criterios para selección y mediación de literatura infantil; lectura compartida y proyectos de fomento lector."
+  },
+  {
+    "id": "PRACTICA_II",
+    "name": "Práctica II: Educación Básica",
+    "semester": 5,
+    "prerequisites": [
+      "PRACTICA_I",
+      "CURRICULUM_EB",
+      "EVALUACION_EB",
+      "DID_LECTURA"
+    ],
+    "description": "Práctica intermedia: planificación y ejecución guiada de actividades, reflexión pedagógica y análisis de evidencias."
+  },
+  {
+    "id": "ELECTIVO_FG_S5",
+    "name": "Electivo Formación General",
+    "semester": 5,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "DID_MAT_II",
+    "name": "Didáctica de la Matemática II",
+    "semester": 6,
+    "prerequisites": [
+      "DID_MAT_I"
+    ],
+    "description": "Profundiza en didáctica matemática: secuencias, resolución de problemas, evaluación y adaptación a diversidad."
+  },
+  {
+    "id": "FISICA",
+    "name": "Física General para Educ. Básica",
+    "semester": 6,
+    "prerequisites": [],
+    "description": "Conceptos fundamentales de física para educación básica: energía, movimiento y fenómenos; base para didáctica."
+  },
+  {
+    "id": "DID_ESCRITURA",
+    "name": "Didáctica de la Escritura",
+    "semester": 6,
+    "prerequisites": [
+      "CURRICULUM_EB",
+      "EVALUACION_EB",
+      "APREND_DES_ESC",
+      "ORALIDAD_SEM_INF"
+    ],
+    "description": "Enseñanza de escritura: procesos, géneros, planificación, retroalimentación y evaluación de producciones."
+  },
+  {
+    "id": "DID_CSOC",
+    "name": "Didáctica de las Ciencias Sociales",
+    "semester": 6,
+    "prerequisites": [
+      "CURRICULUM_EB",
+      "EVALUACION_EB",
+      "APREND_DES_ESC",
+      "CSOCIALES"
+    ],
+    "description": "Metodologías y recursos para enseñar ciencias sociales: habilidades, pensamiento crítico, ciudadanía y evaluación."
+  },
+  {
+    "id": "ELECTIVO_FG_S6",
+    "name": "Electivo Formación General",
+    "semester": 6,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "SEMIN_INV",
+    "name": "Seminario de Investigación en Educación",
+    "semester": 7,
+    "prerequisites": [
+      "PRACTICA_III"
+    ],
+    "description": "Desarrolla competencias de investigación educativa: problema, marco, metodología y análisis, articulado con práctica."
+  },
+  {
+    "id": "GEO_CHILE_ES",
+    "name": "Geografía de Chile: Espacio y Sociedad",
+    "semester": 7,
+    "prerequisites": [],
+    "description": "Aborda territorio chileno, relaciones sociedad‑espacio y problemáticas territoriales para análisis y enseñanza."
+  },
+  {
+    "id": "PRACTICA_III",
+    "name": "Práctica III: Educación Básica",
+    "semester": 7,
+    "prerequisites": [
+      "PRACTICA_II",
+      "DID_MAT_I",
+      "DID_CSOC",
+      "DID_CN_I"
+    ],
+    "description": "Práctica avanzada: intervención más compleja en aula, planificación integrada, evaluación auténtica y reflexión."
+  },
+  {
+    "id": "ELECTIVO_FG_S7_1",
+    "name": "Electivo Formación General",
+    "semester": 7,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "ELECTIVO_FG_S7_2",
+    "name": "Electivo Formación General",
+    "semester": 7,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "DID_CN_II",
+    "name": "Didáctica de las Ciencias Naturales II",
+    "semester": 8,
+    "prerequisites": [
+      "DID_CN_I",
+      "FISICA"
+    ],
+    "description": "Profundización en enseñanza de ciencias naturales: diseño de unidades, indagación avanzada y evaluación de habilidades."
+  },
+  {
+    "id": "ETICA_DOC",
+    "name": "Dimensión Ética de la Profesión Docente",
+    "semester": 8,
+    "prerequisites": [],
+    "description": "Ética profesional docente: responsabilidades, convivencia, justicia educativa, dilemas y normativas de práctica."
+  },
+  {
+    "id": "DID_GEO",
+    "name": "Didáctica de la Geografía",
+    "semester": 8,
+    "prerequisites": [
+      "GEO_CHILE_ES",
+      "CURRICULUM_EB",
+      "EVALUACION_EB",
+      "APREND_DES_ESC"
+    ],
+    "description": "Estrategias para enseñar geografía: pensamiento espacial, trabajo con mapas/datos, salidas pedagógicas y evaluación."
+  },
+  {
+    "id": "CURSO_ELECTIVO_EDU",
+    "name": "Curso Electivo Educación",
+    "semester": 8,
+    "prerequisites": [],
+    "description": "Curso electivo del área de educación."
+  },
+  {
+    "id": "ELECTIVO_FG_S8_1",
+    "name": "Electivo Formación General",
+    "semester": 8,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "ELECTIVO_FG_S8_2",
+    "name": "Electivo Formación General",
+    "semester": 8,
+    "prerequisites": [],
+    "description": "Curso electivo de formación general."
+  },
+  {
+    "id": "GESTION_LIDERAZGO",
+    "name": "Gestión y Liderazgo en el Aula",
+    "semester": 9,
+    "prerequisites": [],
+    "description": "Estrategias de gestión de aula y liderazgo pedagógico para favorecer el aprendizaje y la convivencia."
+  },
+  {
+    "id": "CURSO_MENCION_1",
+    "name": "Curso Mención",
+    "semester": 9,
+    "prerequisites": [],
+    "description": "Curso de especialización según la mención elegida."
+  },
+  {
+    "id": "CURSO_MENCION_2",
+    "name": "Curso Mención",
+    "semester": 9,
+    "prerequisites": [],
+    "description": "Curso de especialización según la mención elegida."
+  },
+  {
+    "id": "PRACTICA_PROF_I",
+    "name": "Práctica Profesional I",
+    "semester": 9,
+    "prerequisites": [
+      "PRACTICA_I",
+      "PRACTICA_II",
+      "PRACTICA_III",
+      "DID_ESCRITURA",
+      "DID_MAT_II",
+      "DID_GEO",
+      "DID_CN_II"
+    ],
+    "description": "Primera etapa de la práctica profesional: inserción plena en el establecimiento y ejercicio autónomo progresivo."
+  },
+  {
+    "id": "CURSO_MENCION_3",
+    "name": "Curso Mención",
+    "semester": 10,
+    "prerequisites": [],
+    "description": "Curso de especialización según la mención elegida."
+  },
+  {
+    "id": "CURSO_MENCION_4",
+    "name": "Curso Mención",
+    "semester": 10,
+    "prerequisites": [],
+    "description": "Curso de especialización según la mención elegida."
+  },
+  {
+    "id": "DID_MENCION",
+    "name": "Curso Didáctica en Mención",
+    "semester": 10,
+    "prerequisites": [],
+    "description": "Didáctica específica de la mención seleccionada."
+  },
+  {
+    "id": "PRACTICA_PROF_II",
+    "name": "Práctica Profesional II",
+    "semester": 10,
+    "prerequisites": [
+      "PRACTICA_PROF_I"
+    ],
+    "description": "Etapa final de la práctica profesional: consolidación de competencias docentes y autonomía profesional."
+  }
+]
