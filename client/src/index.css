@@ -956,9 +956,15 @@ main {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
+  body {
+    overflow: auto !important;
+    height: auto !important;
+  }
+
   .app-container {
-    height: auto;
-    overflow-y: auto;
+    height: auto !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
   }
 
   main {
