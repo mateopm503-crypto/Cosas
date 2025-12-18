@@ -29,21 +29,12 @@ const Chatbot: React.FC = () => {
         setMessages(prev => [...prev, { id: Date.now(), text, sender }]);
     };
 
-    const handleQuestion = (type: 'description' | 'prerequisites' | 'random_desc' | 'search_course') => {
-        if (type === 'random_desc') {
-            // Pick a random course
-            if (courses.length === 0) return;
-            const randomCourse = courses[Math.floor(Math.random() * courses.length)];
-            addMessage(`¿De qué trata ${randomCourse.name}?`, 'user');
-
-            setTimeout(() => {
-                addMessage(randomCourse.description || "No tengo información sobre este curso.", 'bot');
-            }, 500);
-        } else if (type === 'prerequisites') {
+    const handleQuestion = (type: 'description' | 'prerequisites' | 'search_course') => {
+        if (type === 'prerequisites') {
             addMessage("¿Qué ramos tienen requisitos?", 'user');
             setTimeout(() => {
                 const withPrereqs = courses.filter(c => c.prerequisites && c.prerequisites.length > 0);
-                const names = withPrereqs.slice(0, 5).map(c => c.name).join(', '); // Show first 5 to avoid spam
+                const names = withPrereqs.slice(0, 5).map(c => c.name).join(', '); // Show first 5 example
                 const remaining = withPrereqs.length - 5;
                 let msg = `Hay ${withPrereqs.length} cursos con requisitos. Algunos son: ${names}.`;
                 if (remaining > 0) msg += ` ...y ${remaining} más.`;
@@ -68,9 +59,8 @@ const Chatbot: React.FC = () => {
     };
 
     const suggestions = [
-        { label: '¿De qué trata el ramo...?', action: () => handleQuestion('search_course') },
-        { label: '¿De qué trata un ramo al azar?', action: () => handleQuestion('random_desc') },
-        { label: '¿Qué ramos tienen requisitos?', action: () => handleQuestion('prerequisites') },
+        { label: '🔍 Buscar/Ver todos los ramos', action: () => handleQuestion('search_course') },
+        { label: '📋 ¿Qué ramos tienen requisitos?', action: () => handleQuestion('prerequisites') },
     ];
 
     if (!isOpen) {
@@ -100,23 +90,26 @@ const Chatbot: React.FC = () => {
                 {selectingCourse ? (
                     <div className="course-selector">
                         <div className="selector-header">
-                            <span style={{ fontSize: '0.9rem', color: '#666' }}>Elige un ramo:</span>
+                            <span style={{ fontSize: '0.9rem', color: '#666' }}>Selecciona un ramo:</span>
                             <button className="cancel-btn" onClick={() => setSelectingCourse(false)}>Cancelar</button>
                         </div>
                         <input
                             autoFocus
                             type="text"
-                            placeholder="Escribe para buscar..."
+                            placeholder="Filtrar ramos..."
                             value={courseSearch}
                             onChange={(e) => setCourseSearch(e.target.value)}
                             className="mini-search"
                         />
-                        <div className="mini-list">
+                        <div className="mini-list" style={{ maxHeight: '200px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '5px' }}>
                             {courses
                                 .filter(c => c.name.toLowerCase().includes(courseSearch.toLowerCase()))
-                                .slice(0, 5) // Limit results
                                 .map(c => (
-                                    <button key={c.id} onClick={() => handleCourseSelect(c.id)}>
+                                    <button
+                                        key={c.id}
+                                        onClick={() => handleCourseSelect(c.id)}
+                                        style={{ textAlign: 'left', padding: '8px', border: '1px solid #eee', borderRadius: '4px', background: 'white', cursor: 'pointer' }}
+                                    >
                                         {c.name}
                                     </button>
                                 ))}
