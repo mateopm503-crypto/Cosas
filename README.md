@@ -1,62 +1,62 @@
-# Curricular Mesh App
+# Aplicación de Malla Curricular
 
-A comprehensive web application for visualizing and managing circular meshes for university courses (malla curricular).
+Una aplicación web completa para visualizar y gestionar mallas curriculares universitarias.
 
-## Features
+## Características
 
-- **Interactive Mesh**: View courses arranged by semester.
-- **Course Details**: Click on a course to see prerequisites, dependents, and descriptions.
-- **Progress Tracking**: Mark courses as approved; the state is saved locally.
-- **Chatbot Assistant**: Ask questions about courses and prerequisites.
-- **Visual Indicators**: Colors indicate course status (approved, locked, available) and categories.
+- **Malla Interactiva**: Visualiza los cursos organizados por semestre.
+- **Detalles del Curso**: Haz clic en un curso para ver sus prerrequisitos, cursos que abre (dependientes) y descripciones detalladas.
+- **Seguimiento de Progreso**: Marca los cursos como aprobados; el estado se guarda localmente en tu navegador.
+- **Asistente Chatbot**: Haz preguntas sobre los cursos, prerrequisitos y la malla en general.
+- **Indicadores Visuales**: Colores intuitivos que indican el estado del curso (aprobado, bloqueado por prerrequisitos, disponible) y su categoría.
 
-## Tech Stack
+## Tecnologías Utilizadas
 
-- **Client**: React, Vite, TypeScript
-- **Server**: Node.js, Express, TypeScript
+- **Cliente (Frontend)**: React, Vite, TypeScript
+- **Servidor (Backend)**: Node.js, Express, TypeScript
 
-## getting Started
+## Comenzando
 
-### Prerequisites
+### Prerrequisitos
 
-- Node.js installed on your machine.
+- Node.js instalado en tu computadora.
 
-### Installation
+### Instalación
 
-1.  **Clone the repository:**
+1.  **Clonar el repositorio:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone <url-del-repositorio>
+    cd <directorio-del-repositorio>
     ```
 
-2.  **Install dependencies for server:**
+2.  **Instalar dependencias del servidor:**
     ```bash
     cd server
     npm install
     ```
 
-3.  **Install dependencies for client:**
+3.  **Instalar dependencias del cliente:**
     ```bash
     cd ../client
     npm install
     ```
 
-### Running the App
+### Ejecutando la Aplicación
 
-1.  **Start the Server:**
-    From the `server` directory:
+1.  **Iniciar el Servidor:**
+    Desde el directorio `server`:
     ```bash
     npm run dev
     ```
-    The server typically runs on port 3000 (or as configured).
+    El servidor típicamente corre en el puerto 3000 (o segun configuración).
 
-2.  **Start the Client:**
-    From the `client` directory:
+2.  **Iniciar el Cliente:**
+    Desde el directorio `client`:
     ```bash
     npm run dev
     ```
-    Open the URL shown in the terminal (usually `http://localhost:5173`) in your browser.
+    Abre la URL que se muestra en la terminal (usualmente `http://localhost:5173`) en tu navegador.
 
-## Contributing
+## Contribuciones
 
-Feel free to open issues or submit pull requests!
+¡Siéntete libre de abrir issues o enviar pull requests para mejorar el proyecto!
