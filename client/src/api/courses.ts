@@ -1,19 +1,17 @@
 import { Course } from '../types';
+import curriculumData from '../data/curriculum.json';
 
-const API_URL = '/api/courses';
+const courses = curriculumData as Course[];
 
 export const fetchAllCourses = async (): Promise<Course[]> => {
-    const response = await fetch(API_URL);
-    if (!response.ok) {
-        throw new Error('Failed to fetch courses');
-    }
-    return response.json();
+    // Simulate async to keep interface consistent
+    return Promise.resolve(courses);
 };
 
 export const fetchCourseDetails = async (id: string): Promise<Course> => {
-    const response = await fetch(`${API_URL}/${id}`);
-    if (!response.ok) {
-        throw new Error('Failed to fetch course details');
+    const course = courses.find(c => c.id === id);
+    if (!course) {
+        throw new Error('Course not found');
     }
-    return response.json();
+    return Promise.resolve(course);
 };
