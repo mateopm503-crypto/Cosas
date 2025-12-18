@@ -655,10 +655,14 @@ main {
     border: 1px solid black !important;
   }
 
-  .course-card.approved .course-name::before {
-    content: "[âœ”] ";
-    /* Textual check */
+  .course-card.approved .course-name {
     font-weight: bold;
+  }
+
+  /* Hide decorative background blobs in print */
+  body::before,
+  body::after {
+    display: none !important;
   }
 
   .course-card.locked {
