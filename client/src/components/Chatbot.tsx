@@ -53,8 +53,13 @@ const Chatbot: React.FC = () => {
 
         setSelectingCourse(false);
         addMessage(`¿De qué trata ${course.name}?`, 'user');
+        // Reset search
+        setCourseSearch('');
         setTimeout(() => {
-            addMessage(course.description || "No tengo información detallada.", 'bot');
+            const desc = course.description && course.description.trim() !== ""
+                ? course.description
+                : "Lo siento, no tengo información detallada sobre este curso en mi base de datos.";
+            addMessage(desc, 'bot');
         }, 500);
     };
 
@@ -107,7 +112,10 @@ const Chatbot: React.FC = () => {
                                 .map(c => (
                                     <button
                                         key={c.id}
-                                        onClick={() => handleCourseSelect(c.id)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleCourseSelect(c.id);
+                                        }}
                                         style={{ textAlign: 'left', padding: '8px', border: '1px solid #eee', borderRadius: '4px', background: 'white', cursor: 'pointer' }}
                                     >
                                         {c.name}
