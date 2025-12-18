@@ -956,20 +956,28 @@ main {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-  body {
+
+  html,
+  body,
+  #root {
     overflow: auto !important;
     height: auto !important;
+    min-height: 100vh;
+    position: static !important;
+    /* Ensure no fixed positioning traps it */
   }
 
   .app-container {
     height: auto !important;
     overflow: visible !important;
     overflow-y: visible !important;
+    position: static !important;
   }
 
   main {
     padding: 1rem;
-    overflow: visible;
+    overflow: visible !important;
+    height: auto !important;
   }
 
   header {
