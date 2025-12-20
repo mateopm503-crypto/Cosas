@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useCurriculum } from '../context/CurriculumContext';
-import { fetchCourseDetails } from '../api/courses';
+
 import { Course } from '../types';
 
 const CourseDrawer: React.FC = () => {

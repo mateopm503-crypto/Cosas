@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Course } from '../types';
-import { fetchAllCourses, fetchCourseDetails } from '../api/courses';
+import { fetchAllCourses } from '../api/courses';
 
 interface CurriculumContextType {
     courses: Course[];
@@ -17,6 +17,8 @@ interface CurriculumContextType {
     setSearchQuery: (query: string) => void;
     customNames: Record<string, string>;
     setCustomName: (id: string, name: string) => void;
+    hoveredCourse: string | null;
+    setHoveredCourse: (id: string | null) => void;
 }
 
 const CurriculumContext = createContext<CurriculumContextType | undefined>(undefined);
@@ -33,6 +35,7 @@ export const CurriculumProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         return saved ? JSON.parse(saved) : {};
     });
     const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+    const [hoveredCourse, setHoveredCourse] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -111,7 +114,9 @@ export const CurriculumProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             searchQuery,
             setSearchQuery,
             customNames,
-            setCustomName
+            setCustomName,
+            hoveredCourse,
+            setHoveredCourse
         }}>
             {children}
         </CurriculumContext.Provider>
