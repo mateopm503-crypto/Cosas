@@ -16,7 +16,7 @@ function App() {
                 <header>
                     <div className="header-content">
                         <img
-                            src="https://www.uc.cl/site/assets/files/2029/escudo_color.png"
+                            src="/Cosas/logo-uc.jpg"
                             alt="Logo UC"
                             className="uc-logo"
                         />
