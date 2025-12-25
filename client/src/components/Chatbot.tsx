@@ -63,15 +63,19 @@ const Chatbot: React.FC = () => {
         }, 500);
     };
 
+    const SearchIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>;
+    const ListIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>;
+    const HelpIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>;
+
     const suggestions = [
-        { label: '🔍 Buscar/Ver todos los ramos', action: () => handleQuestion('search_course') },
-        { label: '📋 ¿Qué ramos tienen requisitos?', action: () => handleQuestion('prerequisites') },
+        { label: <><SearchIcon /> Buscar/Ver todos los ramos</>, action: () => handleQuestion('search_course') },
+        { label: <><ListIcon /> ¿Qué ramos tienen requisitos?</>, action: () => handleQuestion('prerequisites') },
     ];
 
     if (!isOpen) {
         return (
             <button className="chatbot-toggle" onClick={() => setIsOpen(true)}>
-                💬 Ayuda
+                <HelpIcon /> Ayuda
             </button>
         );
     }
