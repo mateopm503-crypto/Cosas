@@ -1,62 +1,48 @@
-# Aplicación de Malla Curricular
+# Malla Curricular Interactiva - Pedagogía Básica UC
 
-Una aplicación web completa para visualizar y gestionar mallas curriculares universitarias.
+Hice esta aplicación para visualizar mi malla curricular de Pedagogía en Educación General Básica de la UC de forma interactiva. Me ayuda a planificar qué cursos tomar y ver mi progreso en la carrera.
 
-## Características
+## 🎯 ¿Qué hace?
 
-- **Malla Interactiva**: Visualiza los cursos organizados por semestre.
-- **Detalles del Curso**: Haz clic en un curso para ver sus prerrequisitos, cursos que abre (dependientes) y descripciones detalladas.
-- **Seguimiento de Progreso**: Marca los cursos como aprobados; el estado se guarda localmente en tu navegador.
-- **Asistente Chatbot**: Haz preguntas sobre los cursos, prerrequisitos y la malla en general.
-- **Indicadores Visuales**: Colores intuitivos que indican el estado del curso (aprobado, bloqueado por prerrequisitos, disponible) y su categoría.
+- **Vista por semestres**: Todos los cursos organizados del 1° al 10° semestre
+- **Prerrequisitos visuales**: Al hacer clic en un curso, se destacan los prerrequisitos y los cursos que desbloquea
+- **Seguimiento de progreso**: Puedo marcar cursos como aprobados y el progreso se guarda en el navegador
+- **Chatbot de ayuda**: Para consultar información sobre cursos específicos
+- **Categorías por color**: Cada tipo de curso tiene su color (formación general, disciplinarios, etc.)
 
-## Tecnologías Utilizadas
+## 🖥️ Demo
 
-- **Cliente (Frontend)**: React, Vite, TypeScript
-- **Servidor (Backend)**: Node.js, Express, TypeScript
+Puedes ver la aplicación funcionando en: https://mateopm503-crypto.github.io/Cosas/
 
-## Comenzando
+## 🛠️ Tecnologías
 
-### Prerrequisitos
+- React + TypeScript + Vite (Frontend)
+- Node.js + Express (Backend para el chatbot)
 
-- Node.js instalado en tu computadora.
+## 📦 Instalación local
 
-### Instalación
+Si quieres correrlo en tu computadora:
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone <url-del-repositorio>
-    cd <directorio-del-repositorio>
-    ```
+```bash
+# Clonar
+git clone https://github.com/mateopm503-crypto/Cosas.git
+cd Cosas
 
-2.  **Instalar dependencias del servidor:**
-    ```bash
-    cd server
-    npm install
-    ```
+# Instalar dependencias del cliente
+cd client
+npm install
 
-3.  **Instalar dependencias del cliente:**
-    ```bash
-    cd ../client
-    npm install
-    ```
+# Correr en modo desarrollo
+npm run dev
+```
 
-### Ejecutando la Aplicación
+Para el chatbot necesitas también correr el servidor:
+```bash
+cd server
+npm install
+npm run dev
+```
 
-1.  **Iniciar el Servidor:**
-    Desde el directorio `server`:
-    ```bash
-    npm run dev
-    ```
-    El servidor típicamente corre en el puerto 3000 (o segun configuración).
+## 📝 Notas
 
-2.  **Iniciar el Cliente:**
-    Desde el directorio `client`:
-    ```bash
-    npm run dev
-    ```
-    Abre la URL que se muestra en la terminal (usualmente `http://localhost:5173`) en tu navegador.
-
-## Contribuciones
-
-¡Siéntete libre de abrir issues o enviar pull requests para mejorar el proyecto!
+Este proyecto está hecho específicamente para la malla de Pedagogía Básica UC. Si estudias otra carrera, tendrías que modificar el archivo de datos con tu propia malla.
