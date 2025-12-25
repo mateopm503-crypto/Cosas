@@ -16,7 +16,7 @@ function App() {
                 <header>
                     <div className="header-content">
                         <img
-                            src="/Cosas/logo-uc.jpg"
+                            src="/Cosas/logo-uc.png"
                             alt="Logo UC"
                             className="uc-logo"
                         />
