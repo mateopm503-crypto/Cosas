@@ -14,7 +14,17 @@ function App() {
             <div className="app-container">
                 <PrintHeader />
                 <header>
-                    <h1>Malla Curricular Pedagogía Básica UC</h1>
+                    <div className="header-content">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/47/Escudo_Pontificia_Universidad_Cat%C3%B3lica_de_Chile.svg"
+                            alt="Logo UC"
+                            className="uc-logo"
+                        />
+                        <div className="header-titles">
+                            <h1>Pedagogía en Educación General Básica</h1>
+                            <p className="subtitle">Pontificia Universidad Católica de Chile</p>
+                        </div>
+                    </div>
                     <button className="print-btn" onClick={() => window.print()}>
                         🖨️ Imprimir
                     </button>
@@ -32,7 +42,10 @@ function App() {
                 <Chatbot />
                 <CategoryLegend />
                 <footer className="app-footer">
-                    Desarrollado por Mateo Parra
+                    <span>Desarrollado por Mateo Parra</span>
+                    <a href="https://www.instagram.com/cape_uc/" target="_blank" rel="noopener noreferrer" className="ig-link">
+                        📷 @cape_uc
+                    </a>
                 </footer>
             </div>
         </CurriculumProvider>

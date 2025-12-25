@@ -109,13 +109,59 @@ header {
   z-index: 100;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.uc-logo {
+  height: 60px;
+  width: auto;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 header h1 {
   margin: 0;
   background: linear-gradient(45deg, var(--primary-dark), #8E24AA);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.ig-link {
+  color: #E1306C;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.ig-link:hover {
+  color: #C13584;
+  text-decoration: underline;
 }
 
 /* Progress Bar */

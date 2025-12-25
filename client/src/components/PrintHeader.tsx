@@ -12,7 +12,7 @@ const PrintHeader: React.FC = () => {
     return (
         <div className="print-only-header">
             <h1>Reporte de Avance Curricular</h1>
-            <h2>Malla Curricular Pedagogía Básica UC</h2>
+            <h2>Pedagogía en Educación General Básica - UC</h2>
             <div className="print-meta">
                 <p><strong>Fecha de emisión:</strong> {date}</p>
                 <div className="print-stats">
