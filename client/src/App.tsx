@@ -14,7 +14,7 @@ function App() {
             <div className="app-container">
                 <PrintHeader />
                 <header>
-                    <h1>UC noams</h1>
+                    <h1>Malla Curricular Pedagogía Básica UC</h1>
                     <button className="print-btn" onClick={() => window.print()}>
                         🖨️ Imprimir
                     </button>
