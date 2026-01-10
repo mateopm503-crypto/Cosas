@@ -8,7 +8,7 @@ interface Message {
 }
 
 const Chatbot: React.FC = () => {
-    const { courses } = useCurriculum();
+    const { courses, selectedCourse } = useCurriculum();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         { id: 1, text: '¡Hola! Soy tu asistente curricular. ¿En qué puedo ayudarte?', sender: 'bot' }
@@ -73,6 +73,9 @@ const Chatbot: React.FC = () => {
     ];
 
     if (!isOpen) {
+        // Hide button when course drawer is open
+        if (selectedCourse) return null;
+
         return (
             <button className="chatbot-toggle" onClick={() => setIsOpen(true)}>
                 <HelpIcon /> Ayuda
